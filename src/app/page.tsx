@@ -34,10 +34,10 @@ export default function Home() {
           </text>
         </svg>
         <a
-          href="mailto:hello@reordica.com"
-          className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden sm:block"
+          href="/product"
+          className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
         >
-          hello@reordica.com
+          Product
         </a>
       </nav>
 

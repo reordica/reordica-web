@@ -30,6 +30,9 @@ export default function LandingPage() {
 </svg>
     </div>
     <div className="flex items-center gap-6">
+      <Link href="/" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+        Home
+      </Link>
       <Link href="#how-it-works" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
         How it works
       </Link>
