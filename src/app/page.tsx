@@ -61,41 +61,40 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl font-bold leading-[1.15] tracking-tight text-slate-900">
                 Replace the reorder{" "}
                 <span className="relative">
-                  <span className="relative z-10">spreadsheet</span>
+                  <span className="relative z-10">spreadsheet.</span>
                   <span className="absolute bottom-1 left-0 w-full h-3 bg-blue-100 -z-0 rounded-sm" />
                 </span>{" "}
-                with something smarter.
+                Know what to order, and who gets left short.
               </h1>
 
               <p className="mt-8 text-lg text-slate-600 leading-relaxed">
-                Before every purchase order, your procurement team exports data
-                into Excel, manually joining stock levels against orders, working out
-                what to reorder, deciding which customers get priority when
-                stock is tight.
-              </p>
+                If you're exporting data into Excel to decide what to reorder, Reordica replaces that step.
 
-              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-                Hours of work, no audit trail, and when that buyer leaves, the
-                knowledge goes with them.
+                Upload your files. Get a clear reorder plan in seconds.
               </p>
 
               <p className="mt-4 text-lg text-slate-900 font-medium">
-                Reordica replaces that step.
+                You&apos;re probably:
               </p>
+              <ul className="mt-2 space-y-1.5 text-lg text-slate-900 font-medium list-disc list-inside">
+                <li>Exporting stock and orders into Excel</li>
+                <li>Manually figuring out what to reorder</li>
+                <li>Deciding who gets priority when stock is tight</li>
+              </ul>
 
               <div className="mt-10 space-y-4">
                 {[
                   {
                     title: "No integration required",
-                    text: "Upload the same CSV exports you already produce.",
+                    text: "Upload the same CSV exports you already use",
                   },
                   {
-                    title: "Learns how you buy",
-                    text: "Every override is captured, so the system gets smarter each cycle.",
+                    title: "Clear reorder decisions",
+                    text: "See what to order and where you’re exposed.",
                   },
                   {
-                    title: "Preserves institutional knowledge",
-                    text: "Your buying logic stays with the business, not in one person\u2019s head.",
+                    title: "Knowledge doesn’t walk out the door",
+                    text: "Your buying logic stays in the system, not in someone’s head.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -138,40 +137,39 @@ export default function Home() {
       {/* DIVIDER — thin blue accent */}
       <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
-      {/* STATS */}
-      <section className="bg-slate-50/70">
-        <div className="mx-auto max-w-5xl px-6 py-20">
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              {
-                value: "4\u20138 hrs",
-                label: "per week spent on manual reorder spreadsheets",
-              },
-              {
-                value: "~580",
-                label: "Irish distributors in our target segment",
-              },
-              {
-                value: "0%",
-                label: "of that knowledge is captured when a buyer leaves",
-              },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl border border-slate-100 px-6 py-6 text-center"
-              >
-                <p className="text-3xl font-bold text-slate-900 tracking-tight">
-                  {stat.value}
-                </p>
-                <p className="mt-2 text-sm text-slate-500 leading-snug">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+     {/* STATS */}
+<section className="bg-slate-50/70">
+  <div className="mx-auto max-w-5xl px-6 py-20">
+    <div className="grid sm:grid-cols-3 gap-6">
+      {[
+        {
+          value: "4–8 hrs",
+          label: "spent each week rebuilding reorder spreadsheets",
+        },
+        {
+          value: "Every cycle",
+          label: "teams rework the same decisions from scratch",
+        },
+        {
+          value: "1 person",
+          label: "often holds all the buying logic and context",
+        },
+      ].map((stat, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-xl border border-slate-100 px-6 py-6 text-center"
+        >
+          <p className="text-3xl font-bold text-slate-900 tracking-tight">
+            {stat.value}
+          </p>
+          <p className="mt-2 text-sm text-slate-500 leading-snug">
+            {stat.label}
+          </p>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* HOW IT WORKS */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-6 py-20">
