@@ -51,16 +51,16 @@ export default function LandingPage() {
   {/* HERO */}
   <section className="relative mx-auto max-w-7xl px-6 pt-20 pb-32">
     {/* Background decoration */}
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-40 -z-10" />
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-100 rounded-full blur-3xl opacity-40 -z-10" />
     <div className="absolute top-40 right-0 w-72 h-72 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full blur-3xl opacity-30 -z-10" />
 
     <div className="text-center max-w-4xl mx-auto">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-8">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
         </span>
-        <span className="text-sm font-medium text-indigo-700">Now in early access</span>
+        <span className="text-sm font-medium text-blue-700">Now in early access</span>
       </div>
 
       <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
@@ -108,7 +108,7 @@ export default function LandingPage() {
             <StatCard label="Shortfalls Flagged" value="23" trend="this cycle" />
             <StatCard label="Decisions Logged" value="156" trend="learning" />
           </div>
-          <div className="h-40 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 flex items-center justify-center">
+          <div className="h-40 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
             <span className="text-slate-400 text-sm">Reorder Review Table</span>
           </div>
         </div>
@@ -118,12 +118,12 @@ export default function LandingPage() {
 
   {/* PROBLEM */}
   <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
-    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
-    <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2" />
+    <div className="absolute top-0 left-0 w-full h-1 bg-blue-500" />
+    <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2" />
 
     <div className="relative mx-auto max-w-7xl px-6">
       <div className="max-w-3xl">
-        <span className="text-indigo-400 font-semibold text-sm uppercase tracking-wider">The Problem</span>
+        <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">The Problem</span>
         <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
           Your ERP has the data. Your team still{" "}
           <span className="text-blue-400">
@@ -148,7 +148,7 @@ export default function LandingPage() {
   <section className="py-24 bg-gradient-to-b from-white to-slate-50">
     <div className="mx-auto max-w-7xl px-6">
       <div className="text-center max-w-3xl mx-auto">
-        <span className="text-indigo-600 font-semibold text-sm uppercase tracking-wider">The Solution</span>
+        <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">The Solution</span>
         <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
           The decision layer between{" "}
           <span className="text-blue-600">
@@ -167,7 +167,7 @@ export default function LandingPage() {
   <section id="how-it-works" className="py-24 bg-slate-50">
     <div className="mx-auto max-w-7xl px-6">
       <div className="text-center mb-16">
-        <span className="text-indigo-600 font-semibold text-sm uppercase tracking-wider">How It Works</span>
+        <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">How It Works</span>
         <h2 className="mt-4 text-4xl sm:text-5xl font-bold">Upload. Review. Reorder.</h2>
       </div>
 
@@ -202,7 +202,7 @@ export default function LandingPage() {
               />
             </svg>
           }
-          gradient="from-indigo-500 to-purple-500"
+          gradient="from-blue-500 to-blue-500"
         />
         <Step
           number="03"
@@ -213,7 +213,7 @@ export default function LandingPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           }
-          gradient="from-purple-500 to-pink-500"
+          gradient="from-blue-500 to-blue-500"
         />
       </div>
     </div>
@@ -223,7 +223,7 @@ export default function LandingPage() {
   <section id="features" className="py-24 bg-white">
     <div className="mx-auto max-w-7xl px-6">
       <div className="text-center mb-16">
-        <span className="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Features</span>
+        <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Features</span>
         <h2 className="mt-4 text-4xl sm:text-5xl font-bold">Smarter than the spreadsheet</h2>
         <p className="mt-4 text-xl text-slate-600">Built to replace the Excel step — without replacing your systems</p>
       </div>
@@ -264,14 +264,14 @@ export default function LandingPage() {
   </section>
 
   {/* WHO IT'S FOR */}
-  <section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white overflow-hidden relative">
+  <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden relative">
     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
 
     <div className="relative mx-auto max-w-7xl px-6">
       <div className="text-center mb-16">
-        <span className="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Who It&apos;s For</span>
+        <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Who It&apos;s For</span>
         <h2 className="mt-4 text-4xl sm:text-5xl font-bold">Built for distributors and wholesalers</h2>
-        <p className="mt-4 text-lg text-indigo-100/80 max-w-3xl mx-auto">
+        <p className="mt-4 text-lg text-blue-100/80 max-w-3xl mx-auto">
           For procurement teams who piece together data in Excel before every purchase order — and know there has to be a better way.
         </p>
       </div>
@@ -298,7 +298,7 @@ export default function LandingPage() {
 
   {/* CTA */}
   <section id="get-started" className="py-32 bg-white relative overflow-hidden">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-60" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-60" />
 
     <div className="relative mx-auto max-w-4xl px-6 text-center">
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
