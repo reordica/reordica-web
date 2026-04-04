@@ -3,7 +3,7 @@ import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-slate-900 bg-white">
+    <main className="min-h-screen text-slate-900 bg-gradient-to-b from-slate-50 via-white to-slate-50">
       {/* NAV */}
       <nav className="mx-auto max-w-5xl px-6 py-8 flex items-center justify-between">
         <svg
@@ -171,7 +171,7 @@ export default function Home() {
   </div>
 </section>
       {/* HOW IT WORKS */}
-      <section className="bg-white">
+      <section className="bg-gradient-to-b from-white to-slate-50">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <p className="text-sm font-semibold text-blue-600 tracking-wide uppercase text-center mb-3">
             How it works
@@ -243,7 +243,7 @@ export default function Home() {
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="bg-white">
+      <section className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-slate-900">Interested?</h2>
           <p className="mt-4 text-lg text-slate-600 max-w-xl mx-auto">
@@ -257,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-100 bg-slate-50/50">
+      <footer className="border-t border-slate-100 bg-slate-50">
         <div className="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
