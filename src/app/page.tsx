@@ -68,33 +68,33 @@ export default function Home() {
               </h1>
 
               <p className="mt-8 text-lg text-slate-600 leading-relaxed">
-                If you're exporting data into Excel to decide what to reorder, Reordica replaces that step.
-
-                Upload your files. Get a clear reorder plan in seconds.
+                If you&apos;re a distributor or wholesaler using Excel to decide what to reorder, Reordica replaces that step.
+              
+                Upload your files. Get a reorder plan in seconds.
               </p>
 
-              <p className="mt-4 text-lg text-slate-900 font-medium">
-                You&apos;re probably:
+              <p className="mt-4 text-lg text-slate-600 font-medium">
+                This probably looks familiar:
               </p>
-              <ul className="mt-2 space-y-1.5 text-lg text-slate-900 font-medium list-disc list-inside">
+              <ul className="mt-2 space-y-1.5 text-lg text-slate-600 font-medium list-disc list-inside">
                 <li>Exporting stock and orders into Excel</li>
-                <li>Manually figuring out what to reorder</li>
-                <li>Deciding who gets priority when stock is tight</li>
+                <li>Working out what to reorder by hand</li>
+                <li>Trying to see what’s at risk across stock and customer orders</li>
               </ul>
 
               <div className="mt-10 space-y-4">
                 {[
                   {
                     title: "No integration required",
-                    text: "Upload the same CSV exports you already use",
+                    text: "Upload the CSV exports you already use.",
                   },
                   {
-                    title: "Clear reorder decisions",
-                    text: "See what to order and where you’re exposed.",
+                    title: "Clear visibility across stock and demand",
+                    text: "See what to order, what’s at risk, and who gets priority.",
                   },
                   {
                     title: "Knowledge doesn’t walk out the door",
-                    text: "Your buying logic stays in the system, not in someone’s head.",
+                    text: "Your buying logic stays in the business, not in someone’s head.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -142,19 +142,19 @@ export default function Home() {
   <div className="mx-auto max-w-5xl px-6 py-20">
     <div className="grid sm:grid-cols-3 gap-6">
       {[
-        {
-          value: "4–8 hrs",
-          label: "spent each week rebuilding reorder spreadsheets",
-        },
-        {
-          value: "Every cycle",
-          label: "teams rework the same decisions from scratch",
-        },
-        {
-          value: "1 person",
-          label: "often holds all the buying logic and context",
-        },
-      ].map((stat, i) => (
+  {
+    value: "4–8 hrs",
+    label: "lost each week rebuilding the same reorder decisions",
+  },
+  {
+    value: "Zero visibility",
+    label: "between stock, demand, and customer priority",
+  },
+  {
+    value: "1 buyer",
+    label: "usually holds all the context — until they leave",
+  },
+].map((stat, i) => (
         <div
           key={i}
           className="bg-white rounded-xl border border-slate-100 px-6 py-6 text-center"
