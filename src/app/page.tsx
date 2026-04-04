@@ -37,7 +37,7 @@ export default function Home() {
           href="mailto:hello@reordica.com"
           className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden sm:block"
         >
-          garry@reordica.com
+          hello@reordica.com
         </a>
       </nav>
 
@@ -291,7 +291,7 @@ export default function Home() {
               href="mailto:hello@reordica.com"
               className="hover:text-slate-600 transition-colors"
             >
-              garry@reordica.com
+              hello@reordica.com
             </a>
             <span>&copy; 2026 Reordica</span>
           </div>
