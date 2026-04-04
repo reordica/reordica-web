@@ -39,12 +39,6 @@ export default function LandingPage() {
       <Link href="#features" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
         Features
       </Link>
-      <Link
-        href="/signup"
-        className="text-sm px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-all hover:shadow-lg hover:shadow-slate-900/25"
-      >
-        Get started
-      </Link>
     </div>
   </nav>
 
