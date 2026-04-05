@@ -5,6 +5,20 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { AudienceCard } from "@/components/AudienceCard";
 import { LeadForm } from "@/components/LeadForm";
 import { ScrollToFormButton } from "@/components/ScrollToFormButton";
+import {
+  Table,
+  UserX,
+  Clock,
+  RefreshCw,
+  AlertTriangle,
+  Brain,
+  ClipboardList,
+  FileOutput,
+  Shield,
+  Package,
+  Users,
+  Building2,
+} from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -119,9 +133,9 @@ export default function LandingPage() {
       </div>
 
       <div className="mt-12 grid sm:grid-cols-3 gap-6">
-        <PainPoint icon="📊" text="Stock, orders, and supplier data joined manually in Excel every reorder cycle" />
-        <PainPoint icon="🧠" text="Buyer knowledge lives in one person's head — and leaves when they do" />
-        <PainPoint icon="⏱️" text="4–8 hours per week spent on a process no system captures" />
+        <PainPoint icon={<Table className="w-6 h-6" />} text="Stock, orders, and supplier data joined manually in Excel every reorder cycle" />
+        <PainPoint icon={<UserX className="w-6 h-6" />} text="Buyer knowledge lives in one person's head — and leaves when they do" />
+        <PainPoint icon={<Clock className="w-6 h-6" />} text="4–8 hours per week spent on a process no system captures" />
       </div>
     </div>
   </section>
@@ -212,32 +226,32 @@ export default function LandingPage() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <FeatureCard
-          icon="🔄"
+          icon={<RefreshCw className="w-6 h-6" />}
           title="Automatic Data Matching"
           description="Upload CSVs from any system. Reordica maps columns, joins inventory against orders, and calculates shortfalls automatically."
         />
         <FeatureCard
-          icon="🚩"
+          icon={<AlertTriangle className="w-6 h-6" />}
           title="Risk-Sorted Reorder Review"
           description="See what's short, which customers are affected, and where confidence is low — sorted by what matters most."
         />
         <FeatureCard
-          icon="🧠"
+          icon={<Brain className="w-6 h-6" />}
           title="Decision Learning"
           description="When you adjust a recommendation, Reordica captures why. Over time, it learns your priorities, supplier preferences, and risk tolerance."
         />
         <FeatureCard
-          icon="📋"
+          icon={<ClipboardList className="w-6 h-6" />}
           title="Audit Trail"
           description="Every override, adjustment, and approval is logged with context. Know why decisions were made — even after staff change."
         />
         <FeatureCard
-          icon="📤"
+          icon={<FileOutput className="w-6 h-6" />}
           title="PO-Ready Export"
           description="Download a clean CSV with your final quantities, ready to import into your ERP or send to suppliers."
         />
         <FeatureCard
-          icon="🔒"
+          icon={<Shield className="w-6 h-6" />}
           title="Your Data Stays Yours"
           description="Built for European data sovereignty. Commercially sensitive procurement data transitions to on-premises processing as the system matures."
         />
@@ -260,17 +274,17 @@ export default function LandingPage() {
 
       <div className="grid sm:grid-cols-3 gap-8">
         <AudienceCard
-          icon="📦"
+          icon={<Package className="w-8 h-8" />}
           title="Procurement Managers"
           description="The people who spend hours every week wrangling spreadsheets before raising a PO. Reordica gives that time back."
         />
         <AudienceCard
-          icon="👥"
+          icon={<Users className="w-8 h-8" />}
           title="Business Owners & MDs"
           description="When your senior buyer leaves, their institutional knowledge leaves too. Reordica captures it before that happens."
         />
         <AudienceCard
-          icon="📑"
+          icon={<Building2 className="w-8 h-8" />}
           title="Mid-Sized Distributors"
           description="Too complex for basic tools, too lean for enterprise platforms. Reordica fits the gap — no integration project required."
         />
