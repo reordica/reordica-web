@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { StatCard } from "@/components/StatCard";
 import { PainPoint } from "@/components/PainPoint";
 import { Step } from "@/components/Step";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -84,28 +83,11 @@ export default function LandingPage() {
     <div className="mt-20 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10 pointer-events-none" />
       <div className="mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50 overflow-hidden">
-        <div className="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-100">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
-          </div>
-          <div className="flex-1 mx-4">
-            <div className="mx-auto w-80 h-6 rounded-md bg-slate-100 flex items-center justify-center">
-              <span className="text-xs text-slate-400">app.reordica.com/review</span>
-            </div>
-          </div>
-        </div>
-        <div className="p-8 bg-gradient-to-br from-slate-50 to-white">
-          <div className="grid grid-cols-3 gap-4 mb-6">
-            <StatCard label="Items Reviewed" value="2,847" trend="+12%" />
-            <StatCard label="Shortfalls Flagged" value="23" trend="this cycle" />
-            <StatCard label="Decisions Logged" value="156" trend="learning" />
-          </div>
-          <div className="h-40 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
-            <span className="text-slate-400 text-sm">Reorder Review Table</span>
-          </div>
-        </div>
+        <img
+          src="/reordica_dashboard.png"
+          alt="Reordica reorder review dashboard"
+          className="w-full h-auto"
+        />
       </div>
     </div>
   </section>
