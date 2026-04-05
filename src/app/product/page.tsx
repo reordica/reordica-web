@@ -80,7 +80,11 @@ export default function LandingPage() {
     </div>
 
     {/* Dashboard Preview */}
-    <div className="mt-20 relative px-6">
+    <div className="mt-20 text-center">
+      <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Dashboard Preview</span>
+      <h2 className="mt-2 text-2xl font-bold text-slate-900">See your reorder review at a glance</h2>
+    </div>
+    <div className="mt-8 relative px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10 pointer-events-none" />
       <div className="mx-auto max-w-7xl rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50 overflow-hidden">
         <a href="/reordica_dashboard.png" target="_blank" rel="noopener noreferrer">
