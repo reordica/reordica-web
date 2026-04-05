@@ -31,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
