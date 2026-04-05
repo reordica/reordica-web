@@ -80,14 +80,16 @@ export default function LandingPage() {
     </div>
 
     {/* Dashboard Preview */}
-    <div className="mt-20 relative">
+    <div className="mt-20 relative px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10 pointer-events-none" />
-      <div className="mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50 overflow-hidden">
-        <img
-          src="/reordica_dashboard.png"
-          alt="Reordica reorder review dashboard"
-          className="w-full h-auto"
-        />
+      <div className="mx-auto max-w-7xl rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50 overflow-hidden">
+        <a href="/reordica_dashboard.png" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/reordica_dashboard.png"
+            alt="Reordica reorder review dashboard"
+            className="w-full h-auto"
+          />
+        </a>
       </div>
     </div>
   </section>
