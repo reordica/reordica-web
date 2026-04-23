@@ -64,37 +64,47 @@ export default function Home() {
                   <span className="relative z-10">spreadsheet.</span>
                   <span className="absolute bottom-1 left-0 w-full h-3 bg-blue-100 -z-0 rounded-sm" />
                 </span>{" "}
-                Know what to order, and who gets left short.
+                See who gets shorted before the PO goes out.
               </h1>
 
-              <p className="mt-8 text-lg text-slate-600 leading-relaxed">
-                If you&apos;re a distributor or wholesaler using Excel to decide what to reorder, Reordica replaces that step.
-              
-                Upload your files. Get a reorder plan in seconds.
+              <p className="mt-8 text-lg text-slate-600 leading-relaxed italic">
+                &ldquo;When stock runs tight at a distributor, it&apos;s usually
+                the wrong customers who lose out.&rdquo;
               </p>
 
-              <p className="mt-4 text-lg text-slate-600 font-medium">
+              <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+                If you&apos;re a distributor or wholesaler using Excel to decide
+                what to reorder, Reordica replaces that step. Upload your
+                files, see which customers are covered, at risk, or short —
+                and work through the list with Co-buyer, an AI assistant with
+                full context on every SKU.
+              </p>
+
+              <p className="mt-6 text-lg text-slate-600 font-medium">
                 This probably looks familiar:
               </p>
               <ul className="mt-2 space-y-1.5 text-lg text-slate-600 font-medium list-disc list-inside">
-                <li>Exporting stock and orders into Excel</li>
-                <li>Working out what to reorder by hand</li>
-                <li>Trying to see what’s at risk across stock and customer orders</li>
+                <li>Exporting stock, orders, and supplier data into Excel</li>
+                <li>Reconciling it by hand before every purchase order</li>
+                <li>
+                  Finding out which customers got shorted only when the phone
+                  rings
+                </li>
               </ul>
 
               <div className="mt-10 space-y-4">
                 {[
                   {
-                    title: "No integration required",
-                    text: "Upload the CSV exports you already use.",
+                    title: "Covered, at risk, or short — before the PO",
+                    text: "See exactly which customers are affected by each shortfall, with priority and due date already applied.",
                   },
                   {
-                    title: "Clear visibility across stock and demand",
-                    text: "See what to order, what’s at risk, and who gets priority.",
+                    title: "Co-buyer does the wrangling",
+                    text: "Upload the CSV exports you already use. Co-buyer matches the data, flags the risks, and answers questions on every SKU.",
                   },
                   {
-                    title: "Knowledge doesn’t walk out the door",
-                    text: "Your buying logic stays in the business, not in someone’s head.",
+                    title: "Your buying knowledge stays with the business",
+                    text: "Every override and the reasoning behind it gets remembered — so recommendations get sharper, and the context stays when buyers move on.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -137,39 +147,43 @@ export default function Home() {
       {/* DIVIDER — thin blue accent */}
       <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
-     {/* STATS */}
-<section className="bg-slate-50/70">
-  <div className="mx-auto max-w-5xl px-6 py-20">
-    <div className="grid sm:grid-cols-3 gap-6">
-      {[
-  {
-    value: "4–8 hrs",
-    label: "lost each week rebuilding the same reorder decisions",
-  },
-  {
-    value: "Zero visibility",
-    label: "between stock, demand, and customer priority",
-  },
-  {
-    value: "1 buyer",
-    label: "usually holds all the context — until they leave",
-  },
-].map((stat, i) => (
-        <div
-          key={i}
-          className="bg-white rounded-xl border border-slate-100 px-6 py-6 text-center"
-        >
-          <p className="text-3xl font-bold text-slate-900 tracking-tight">
-            {stat.value}
-          </p>
-          <p className="mt-2 text-sm text-slate-500 leading-snug">
-            {stat.label}
-          </p>
+      {/* STATS */}
+      <section className="bg-slate-50/70">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="grid sm:grid-cols-3 gap-6">
+            {[
+              {
+                value: "4–8 hrs",
+                label:
+                  "spent every week wrangling supplier, stock, and order data before a PO",
+              },
+              {
+                value: "No tool",
+                label:
+                  "shows which customers are at risk when stock runs tight",
+              },
+              {
+                value: "1 buyer",
+                label:
+                  "usually holds the priority judgement — until they change role",
+              },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl border border-slate-100 px-6 py-6 text-center"
+              >
+                <p className="text-3xl font-bold text-slate-900 tracking-tight">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm text-slate-500 leading-snug">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
       {/* HOW IT WORKS */}
       <section className="bg-gradient-to-b from-white to-slate-50">
         <div className="mx-auto max-w-5xl px-6 py-20">
@@ -185,17 +199,17 @@ export default function Home() {
               {
                 step: "01",
                 title: "Upload your CSVs",
-                text: "The same inventory, orders, and supplier files you already export. No new formats, no integration project.",
+                text: "The same inventory, orders, and supplier files you already export. Co-buyer maps the columns on first upload and remembers them next time.",
               },
               {
                 step: "02",
-                title: "Review the reorder table",
-                text: "See recommended quantities, shortfalls, and affected customers \u2014 sorted by risk. Adjust anything before committing.",
+                title: "Work through the Reorder Review",
+                text: "See recommended quantities, shortfalls, and which customers are covered, at risk, or short — before the PO goes out. Ask Co-buyer anything about any SKU.",
               },
               {
                 step: "03",
-                title: "Export and order",
-                text: "Download a PO-ready CSV with your final quantities. Every decision is logged \u2014 building your procurement memory.",
+                title: "Export the PO",
+                text: "Download a PO-ready CSV with your final quantities. Every override and its reasoning gets remembered — so next week&apos;s review is sharper.",
               },
             ].map((item, i) => (
               <div
@@ -232,9 +246,10 @@ export default function Home() {
             </svg>
           </div>
           <p className="text-xl text-slate-700 leading-relaxed italic">
-            &ldquo;Every distributor I&apos;ve worked with does this in Excel.
-            Even the ones with good ERP systems. The spreadsheet is where the
-            real decisions happen.&rdquo;
+            &ldquo;His current company is grappling with problems of visibility
+            between customer order priority and inventory. They&apos;re working
+            off spreadsheets even though they&apos;re a multi-million euro
+            business.&rdquo;
           </p>
           <p className="mt-4 text-sm text-slate-500">
             Industry advisor — 30 years in Irish supply chain
@@ -247,12 +262,12 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-slate-900">Interested?</h2>
           <p className="mt-4 text-lg text-slate-600 max-w-xl mx-auto">
-            We&apos;re looking for a small number of Irish distributors to pilot
-            Reordica. If your team spends hours in Excel before every purchase
-            order, we&apos;d like to talk.
+            We&apos;re working with a small number of Irish distributors to
+            pilot Reordica. If your team wrangles spreadsheets before every
+            purchase order — and the wrong customers occasionally get shorted
+            — we&apos;d like to talk.
           </p>
           <ScrollToTopButton />
-         
         </div>
       </section>
 
