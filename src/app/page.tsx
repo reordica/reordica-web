@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
@@ -39,12 +40,26 @@ export default function Home() {
             Reordica
           </text>
         </svg>
-        <a
-          href="/product"
-          className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
-        >
-          Product
-        </a>
+        <div className="flex items-center gap-6">
+          <Link
+            href="/product"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+          >
+            Product
+          </Link>
+          <Link
+            href="/pilot"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
+          >
+            Pilot
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
+          >
+            About
+          </Link>
+        </div>
       </nav>
 
       {/* HERO + FORM */}

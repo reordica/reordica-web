@@ -83,6 +83,18 @@ export default function ProductPage() {
           >
             Features
           </Link>
+          <Link
+            href="/pilot"
+            className="text-sm text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
+          >
+            Pilot
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm text-slate-600 hover:text-slate-900 transition-colors hidden sm:block"
+          >
+            About
+          </Link>
         </div>
       </nav>
 
