@@ -43,7 +43,7 @@ public/               # Static assets — logos, favicon, OG images
 - **Tagline**: "Replace the reorder spreadsheet with something smarter."
 - **Subtitle**: PROCUREMENT INTELLIGENCE (used in logo lockup)
 - **Domain**: reordica.com (marketing), app.reordica.com (product)
-- **Email**: hello@reordica.com
+- **Email**: garry@reordica.com (canonical contact address for now)
 - **Target market**: Irish wholesale distributors, 50-249 employees (~580 companies)
 - **Pricing**: €399/month (not yet public on the marketing site)
 

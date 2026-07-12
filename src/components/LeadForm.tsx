@@ -34,7 +34,7 @@ export function LeadForm() {
     } catch (err) {
       console.error("Lead capture error:", err);
       setError(
-        "Something went wrong. Please try again or email hello@reordica.com"
+        "Something went wrong. Please try again or email garry@reordica.com"
       );
     } finally {
       setSubmitting(false);
