@@ -1,6 +1,12 @@
 import { LeadForm } from "@/components/LeadForm";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
+const statusChips = [
+  { label: "Covered", dot: "bg-emerald-500", chip: "bg-emerald-50 border-emerald-200 text-emerald-700" },
+  { label: "At risk", dot: "bg-amber-500", chip: "bg-amber-50 border-amber-200 text-amber-700" },
+  { label: "Short", dot: "bg-rose-500", chip: "bg-rose-50 border-rose-200 text-rose-700" },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen text-slate-900 bg-gradient-to-b from-slate-50 via-white to-slate-50">
@@ -54,7 +60,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                 <span className="text-xs font-medium text-blue-700">
-                  Now accepting pilot applications
+                  Piloting with Irish distributors — applications open
                 </span>
               </div>
 
@@ -67,17 +73,19 @@ export default function Home() {
                 See who gets shorted before the PO goes out.
               </h1>
 
-              <p className="mt-8 text-lg text-slate-600 leading-relaxed italic">
-                &ldquo;When stock runs tight at a distributor, it&apos;s usually
-                the wrong customers who lose out.&rdquo;
+              <p className="mt-8 text-lg text-slate-600 leading-relaxed">
+                When stock runs tight, it&apos;s rarely the right customers who
+                lose out — it&apos;s whoever&apos;s order happens to land last.
+                If your team decides what to reorder in Excel, Reordica
+                replaces that step.
               </p>
 
               <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-                If you&apos;re a distributor or wholesaler using Excel to decide
-                what to reorder, Reordica replaces that step. Upload your
-                files, see which customers are covered, at risk, or short —
-                and work through the list with Co-buyer, an AI assistant with
-                full context on every SKU.
+                Upload the stock, order, and supplier exports you already
+                produce. Reordica sorts out the data problems on arrival, shows
+                which customers are covered, at risk, or short, and lets you
+                work the list with Co-buyer — an AI assistant with full context
+                on every SKU.
               </p>
 
               <p className="mt-6 text-lg text-slate-600 font-medium">
@@ -85,54 +93,108 @@ export default function Home() {
               </p>
               <ul className="mt-2 space-y-1.5 text-lg text-slate-600 font-medium list-disc list-inside">
                 <li>Exporting stock, orders, and supplier data into Excel</li>
-                <li>Reconciling it by hand before every purchase order</li>
+                <li>Matching it all up by hand before every purchase order</li>
                 <li>
-                  Finding out which customers got shorted only when the phone
-                  rings
+                  Finding out which customers got shorted when the phone rings
                 </li>
               </ul>
 
-              <div className="mt-10 space-y-4">
-                {[
-                  {
-                    title: "Covered, at risk, or short — before the PO",
-                    text: "See exactly which customers are affected by each shortfall, with priority and due date already applied.",
-                  },
-                  {
-                    title: "Co-buyer does the wrangling",
-                    text: "Upload the CSV exports you already use. Co-buyer matches the data, flags the risks, and answers questions on every SKU.",
-                  },
-                  {
-                    title: "Your buying knowledge stays with the business",
-                    text: "Every override and the reasoning behind it gets remembered — so recommendations get sharper, and the context stays when buyers move on.",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
-                      <svg
-                        className="w-3.5 h-3.5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={3}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-slate-900 font-semibold text-[15px]">
-                        {item.title}
-                      </p>
-                      <p className="text-slate-500 text-sm mt-0.5">
-                        {item.text}
-                      </p>
+              <div className="mt-10 space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                    <svg
+                      className="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 font-semibold text-[15px]">
+                      Messy data, sorted on upload
+                    </p>
+                    <p className="text-slate-500 text-sm mt-0.5">
+                      Duplicate suppliers, mismatched units, stale records —
+                      flagged the moment your files land. You confirm every
+                      fix; nothing changes without your say-so.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                    <svg
+                      className="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 font-semibold text-[15px]">
+                      Every customer, accounted for — before the PO
+                    </p>
+                    <p className="text-slate-500 text-sm mt-0.5">
+                      Every shortfall mapped to the customers it affects, with
+                      priority and due dates already applied.
+                    </p>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      {statusChips.map((s) => (
+                        <span
+                          key={s.label}
+                          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-xs font-medium ${s.chip}`}
+                        >
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full ${s.dot}`}
+                          />
+                          {s.label}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                    <svg
+                      className="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 font-semibold text-[15px]">
+                      Buying knowledge that stays with the business
+                    </p>
+                    <p className="text-slate-500 text-sm mt-0.5">
+                      Every override and the reasoning behind it is remembered,
+                      so each cycle&apos;s recommendations get sharper — and the
+                      judgement doesn&apos;t leave when a buyer does.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -155,17 +217,17 @@ export default function Home() {
               {
                 value: "4–8 hrs",
                 label:
-                  "spent every week wrangling supplier, stock, and order data before a PO",
+                  "spent every week wrangling stock, order, and supplier data before a PO goes out",
               },
               {
                 value: "No tool",
                 label:
-                  "shows which customers are at risk when stock runs tight",
+                  "in the mid-market shows which customers are at risk when stock runs tight",
               },
               {
                 value: "1 buyer",
                 label:
-                  "usually holds the priority judgement — until they change role",
+                  "usually holds the priority judgement — and it leaves when they do",
               },
             ].map((stat, i) => (
               <div
@@ -198,18 +260,18 @@ export default function Home() {
             {[
               {
                 step: "01",
-                title: "Upload your CSVs",
-                text: "The same inventory, orders, and supplier files you already export. Co-buyer maps the columns on first upload and remembers them next time.",
+                title: "Upload your exports",
+                text: "The same stock, order, and supplier CSVs you already pull from your system. Reordica maps the columns on first upload, flags anything that doesn\u2019t add up, and remembers the format next time.",
               },
               {
                 step: "02",
-                title: "Work through the Reorder Review",
-                text: "See recommended quantities, shortfalls, and which customers are covered, at risk, or short — before the PO goes out. Ask Co-buyer anything about any SKU.",
+                title: "Work the Reorder Review",
+                text: "Recommended quantities, shortfalls, and the customers behind each one — covered, at risk, or short. Ask Co-buyer anything about any SKU, and override anything you disagree with.",
               },
               {
                 step: "03",
                 title: "Export the PO",
-                text: "Download a PO-ready CSV with your final quantities. Every override and its reasoning gets remembered — so next week&apos;s review is sharper.",
+                text: "Download a PO-ready CSV with your final quantities. Every decision and its reasoning is remembered, so next week\u2019s review starts sharper than this one.",
               },
             ].map((item, i) => (
               <div
@@ -230,10 +292,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <p className="mt-10 text-center text-sm text-slate-400 max-w-xl mx-auto">
+            Your files stay private to your company, are used only to run your
+            reviews, and are deleted on request. Reordica suggests — your team
+            decides.
+          </p>
         </div>
       </section>
 
-      {/* QUOTE / SOCIAL PROOF PLACEHOLDER */}
+      {/* QUOTE / SOCIAL PROOF */}
       <section className="bg-slate-50/70">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 mb-6">
@@ -252,7 +320,7 @@ export default function Home() {
             business.&rdquo;
           </p>
           <p className="mt-4 text-sm text-slate-500">
-            Industry advisor — 30 years in Irish supply chain
+            Industry advisor — 30 years in Irish distribution
           </p>
         </div>
       </section>
@@ -260,12 +328,14 @@ export default function Home() {
       {/* BOTTOM CTA */}
       <section className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-          <h2 className="text-3xl font-bold text-slate-900">Interested?</h2>
+          <h2 className="text-3xl font-bold text-slate-900">
+            Wrangling spreadsheets before every PO?
+          </h2>
           <p className="mt-4 text-lg text-slate-600 max-w-xl mx-auto">
             We&apos;re working with a small number of Irish distributors to
-            pilot Reordica. If your team wrangles spreadsheets before every
-            purchase order — and the wrong customers occasionally get shorted
-            — we&apos;d like to talk.
+            pilot Reordica — real files, real reorder cycles, and a direct say
+            in what gets built. If stock runs tight and the wrong customers
+            sometimes lose out, we&apos;d like to talk.
           </p>
           <ScrollToTopButton />
         </div>
@@ -274,39 +344,44 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-slate-100 bg-slate-50">
         <div className="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 300 52"
-            className="h-7 w-auto opacity-60"
-          >
-            <rect x="0" y="4" width="8" height="44" rx="2" fill="#2563eb" />
-            <rect
-              x="12"
-              y="14"
-              width="8"
-              height="34"
-              rx="2"
-              fill="#3b82f6"
-              opacity="0.7"
-            />
-            <text
-              x="32"
-              y="42"
-              fontFamily="Arial, Helvetica, sans-serif"
-              fontSize="40"
-              fontWeight="700"
-              fill="#0f172a"
-              letterSpacing="0.02em"
+          <div className="flex flex-col items-center sm:items-start gap-1.5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 300 52"
+              className="h-7 w-auto opacity-60"
             >
-              Reordica
-            </text>
-          </svg>
+              <rect x="0" y="4" width="8" height="44" rx="2" fill="#2563eb" />
+              <rect
+                x="12"
+                y="14"
+                width="8"
+                height="34"
+                rx="2"
+                fill="#3b82f6"
+                opacity="0.7"
+              />
+              <text
+                x="32"
+                y="42"
+                fontFamily="Arial, Helvetica, sans-serif"
+                fontSize="40"
+                fontWeight="700"
+                fill="#0f172a"
+                letterSpacing="0.02em"
+              >
+                Reordica
+              </text>
+            </svg>
+            <p className="text-xs text-slate-400">
+              Built in Ireland, for Irish wholesale and distribution.
+            </p>
+          </div>
           <div className="flex items-center gap-6 text-sm text-slate-400">
             <a
-              href="mailto:hello@reordica.com"
+              href="mailto:garry@reordica.com"
               className="hover:text-slate-600 transition-colors"
             >
-              hello@reordica.com
+              garry@reordica.com
             </a>
             <span>&copy; 2026 Reordica</span>
           </div>
